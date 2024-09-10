@@ -71,5 +71,8 @@ FindIt is a web-based **Digital Lost and Found Platform** for IIITN, designed to
 
 ### **1. Clone the Repository**
 ```bash
-git clone https://github.com/yourusername/findit-lost-and-found-platform.git
+git clone https://github.com/geeekyvishal/Foundit.git
+```
+```bash
 cd findit-lost-and-found-platform
+```
