@@ -18,9 +18,9 @@ FindIt is a web-based **Digital Lost and Found Platform** for [Your College Name
 
 | **Name**             | **GitHub**                           | **Email**                    |
 | -------------------- | ------------------------------------- | ---------------------------- |
-| Vishal Singh          | [GitHub Profile](https://github.com/geeekyvishal) | bt23csd002@iiitn.ac.in    |
-| Tanishq Parihar       | [GitHub Profile](https://github.com/randomfunction) | bt23csd005@iiitn.ac.in  |
-| Om Amar               | [GitHub Profile](https://github.com/omamar) | bt23cse106@iiitn.ac.in          |
+| Vishal Singh          | [geeekyvishal](https://github.com/geeekyvishal) | bt23csd002@iiitn.ac.in    |
+| Tanishq Parihar       | [randomfunction](https://github.com/randomfunction) | bt23csd005@iiitn.ac.in  |
+| Om Amar               | [OmAmar106](https://github.com/OmAmar106) | bt23cse106@iiitn.ac.in          |
 
 ---
 
