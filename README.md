@@ -1,8 +1,8 @@
-# **FindIt - Digital Lost and Found Platform**
+# **FoundIt - Digital Lost and Found Platform**
 
 ### **Project Overview**
 
-FindIt is a web-based **Digital Lost and Found Platform** for IIITN, designed to help students and staff easily report lost or found items on campus. The platform provides an intuitive interface to manage lost and found listings and automates the matching of lost items with found items based on descriptions, categories, and images.
+Foundit is a web-based **Digital Lost and Found Platform** for IIITN, designed to help students and staff easily report lost or found items on campus. The platform provides an intuitive interface to manage lost and found listings and automates the matching of lost items with found items based on descriptions, categories, and images.
 
 ---
 
