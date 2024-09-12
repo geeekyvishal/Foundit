@@ -13,10 +13,17 @@ module.exports = function(passport) {
         callbackURL: "/auth/google/callback"
     },
     async (accessToken, refreshToken, profile, done) => {
+        const email = profile.emails[0].value;
+        const domain = email.split('@')[1];
+
+        if (domain !== 'iiitn.ac.in') {
+            return done(null, false, { message: 'Invalid email domain' });
+        }
+
         const newUser = {
             googleId: profile.id,
             name: profile.displayName,
-            email: profile.emails[0].value
+            email: email
         };
         try {
             let user = await User.findOne({ googleId: profile.id });
@@ -35,11 +42,11 @@ module.exports = function(passport) {
 
     passport.deserializeUser(async (id, done) => {
         try {
-          const user = await User.findById(id);
-          done(null, user);
+            const user = await User.findById(id); 
+            done(null, user);
         } catch (err) {
-          done(err);
+            done(err, null);
         }
-      });
-      
+    });
+    
 };
