@@ -74,5 +74,5 @@ Foundit is a web-based **Digital Lost and Found Platform** for IIITN, designed t
 git clone https://github.com/geeekyvishal/Foundit.git
 ```
 ```bash
-cd findit-lost-and-found-platform
+cd Foundit
 ```
