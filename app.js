@@ -4,12 +4,14 @@ const session = require('express-session');
 const passport = require('passport');
 const MongoStore = require('connect-mongo');
 const dotenv = require('dotenv');
-const authRoutes = require('./routes/auth');
-
-console.log('GOOGLE_CLIENT_ID:', process.env.GOOGLE_CLIENT_ID);
+const path = require('path');
+const User = require('./models/User');
 
 dotenv.config();
 require('./config/passport')(passport);
+
+const authRoutes = require('./routes/auth');
+const itemRoutes = require('./routes/item');
 
 const app = express();
 
@@ -28,19 +30,41 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 app.set('view engine', 'ejs');
 
 app.use('/auth', authRoutes);
+app.use('/', itemRoutes);
 
-app.get('/', (req, res) => res.render('login'));
-app.get('/home', (req, res) => {
+app.get('/home', async (req, res) => {
     if (req.isAuthenticated()) {
-        res.render('home', { user: req.user });
+        try {
+            const users = await User.find();
+            const lostItems = [];
+            const foundItems = [];
+
+            users.forEach(user => {
+                user.items.forEach(item => {
+                    if (item.type === 'lost') {
+                        lostItems.push({ user, item });
+                    } else if (item.type === 'found') {
+                        foundItems.push({ user, item });
+                    }
+                });
+            });
+
+            res.render('home', { user: req.user, lostItems, foundItems });
+        } catch (err) {
+            console.error(err);
+            res.redirect('/');
+        }
     } else {
         res.redirect('/');
     }
 });
 
+app.get('/', (req, res) => res.render('login'));
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-

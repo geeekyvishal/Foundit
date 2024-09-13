@@ -12,7 +12,27 @@ const UserSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true
-    }
+    },
+    items: [
+        {
+            type: {
+                type: String, 
+                required: true
+            },
+            description: {
+                type: String,
+                required: true
+            },
+            photo: {
+                type: String,  
+                required: true
+            },
+            date: {
+                type: Date,
+                default: Date.now
+            }
+        }
+    ]
 });
 
 module.exports = mongoose.model('User', UserSchema);

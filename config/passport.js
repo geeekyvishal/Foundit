@@ -14,10 +14,8 @@ module.exports = function(passport) {
     },
     async (accessToken, refreshToken, profile, done) => {
         const email = profile.emails[0].value;
-        const domain = email.split('@')[1];
-
-        if (domain !== 'iiitn.ac.in') {
-            return done(null, false, { message: 'Invalid email domain' });
+        if (!email.endsWith('@iiitn.ac.in')) {
+            return done(null, false, { message: 'Only iiitn domain emails are allowed' });
         }
 
         const newUser = {
@@ -25,6 +23,7 @@ module.exports = function(passport) {
             name: profile.displayName,
             email: email
         };
+        
         try {
             let user = await User.findOne({ googleId: profile.id });
             if (user) {
