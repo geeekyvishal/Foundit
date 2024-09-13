@@ -15,6 +15,8 @@ const itemRoutes = require('./routes/item');
 
 const app = express();
 
+app.use(express.static('public'));
+
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -37,7 +39,7 @@ app.set('view engine', 'ejs');
 app.use('/auth', authRoutes);
 app.use('/', itemRoutes);
 
-app.get('/home', async (req, res) => {
+app.get('/index', async (req, res) => {
     if (req.isAuthenticated()) {
         try {
             const users = await User.find();
@@ -54,7 +56,7 @@ app.get('/home', async (req, res) => {
                 });
             });
 
-            res.render('home', { user: req.user, lostItems, foundItems });
+            res.render('index', { user: req.user, lostItems, foundItems });
         } catch (err) {
             console.error(err);
             res.redirect('/');
@@ -64,7 +66,7 @@ app.get('/home', async (req, res) => {
     }
 });
 
-app.get('/', (req, res) => res.render('login'));
+app.get('/', (req, res) => res.render('index'));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

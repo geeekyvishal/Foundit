@@ -35,10 +35,10 @@ router.post('/add-item', upload.single('photo'), async (req, res) => {
                 items: { type, description, photo: photoUrl }
             }
         });
-        res.redirect('/home');
+        res.redirect('/index');
     } catch (err) {
         console.error(err);
-        res.redirect('/home');
+        res.redirect('/index');
     }
 });
 

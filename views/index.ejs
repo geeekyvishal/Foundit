@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--=============== FAVICON ===============-->
+  <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
+
+  <!--=============== BOXICONS ===============-->
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+  <!--=============== SWIPER CSS ===============-->
+  <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="/css/styles.css" />
+
+  <title>Foundit</title>
+</head>
+
+<body>
+  <!-- Include the navigation bar -->
+  <%- include('partials/navbar') %>
+
+  <!-- Main content -->
+  <main>
+    <!-- Include the home and lost-found partials -->
+    <%- include('partials/home') %>
+    <%- include('partials/lost-found') %>
+    <%- include('partials/add-item') %>
+  </main>
+
+  <!-- Include the footer partial -->
+  <%- include('partials/footer') %>
+
+  <!--========== SCROLL UP ==========-->
+  <a href="#" class="scrollup" id="scroll-up">
+    <i class="bx bx-chevrons-up"></i>
+  </a>
+
+  <!--=============== SCROLLREVEAL ===============-->
+  <script src="/js/scrollreveal.min.js"></script>
+
+  <!--=============== SWIPER JS ===============-->
+  <script src="/js/swiper-bundle.min.js"></script>
+
+  <!--=============== MAIN JS ===============-->
+  <script src="/js/main.js"></script>
+  <!--=============== SELECT JS ===============-->
+  <script src="/js/select_tag.js"></script>
+  <script src="/js/drop.js"></script>
+</body>
+</html>

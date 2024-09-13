@@ -7,12 +7,12 @@ router.get('/google', passport.authenticate('google', { scope: ['profile', 'emai
 router.get('/google/callback', 
     passport.authenticate('google', { failureRedirect: '/auth/login-failed' }),
     (req, res) => {
-        res.redirect('/home');
+        res.redirect('/index');
     }
 );
 
 router.get('/login-failed', (req, res) => {
-    res.render('login', { message: 'Only @iiitn.ac.in emails are allowed' });
+    res.render('index', { message: 'Only @iiitn.ac.in emails are allowed' });
 });
 
 router.get('/logout', (req, res, next) => {
