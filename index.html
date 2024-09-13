@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="asset/img/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!--=============== BOXICONS ===============-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="asset/css/swiper-bundle.min.css" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="asset/css/styles.css" />
+
+    <title>Responsive real state website - Bedimcode</title>
+  </head>
+
+  <body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">
+          FoundIt <i class="bx bxs-home-alt-2"></i>
+        </a>
+
+        <div class="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">
+                <i class="bx bx-home-alt-2"></i>
+                <span>Home</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#popular" class="nav__link">
+                <i class="bx bx-building-house"></i>
+                <span>LOST</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#value" class="nav__link">
+                <i class="bx bx-award"></i>
+                <span>FOUND</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <!-- <a href="#contact" class="button nav__button "> -->
+              <a href="#contact" class="nav__link">
+                <!-- <i class='bx bxs-message-square-add'></i> -->
+                <i class="fa-solid fa-circle-plus"></i>
+                <span> ↈ Lost or Found ?</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Theme change button -->
+        <i class="bx bx-moon change-theme" id="theme-button"></i>
+
+        <!-- <a href="#contact" class="button nav__button"> Lost or Found Something </a> -->
+
+        <a
+          href="https://github.com/geeekyvishal/Foundit"
+          class="nav__link"
+          target="_blank"
+        >
+          <span>GitHub </span>
+
+          <a
+            href="https://github.com/geeekyvishal/Foundit"
+            target="_blank"
+            class="footer__social-link"
+          >
+            <i class="bx bxl-github"></i>
+          </a>
+        </a>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <div class="home__data">
+            <h1 class="home__title">
+              Lost <br />
+              Found <br />
+              Returned 🙂
+            </h1>
+            <p class="home__description">
+              FoundIt is your go-to platform for reporting and finding lost
+              items within our college campus.
+              <br />
+              Whether it's your phone, ID card, keys, or any other belongings,
+              FoundIt helps you reconnect with your missing items in just a few
+              clicks.
+            </p>
+
+            <div class="home__value">
+              <!-- From the house of 
+                <br> -->
+              <img src="asset/img/CRISPR_white.png" alt="" width="150px" />
+            </div>
+          </div>
+
+          <div class="home__images">
+            <div class="home__orbe"></div>
+
+            <div class="home__img">
+              <img src="asset/img/home.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== POPULAR ====================-->
+      <section class="popular section" id="popular">
+        <div class="container">
+          <!-- <h2 class="section__title">List of Lost Items<span>.</span></h2> -->
+          <span class="section__subtitle">Lost</span>
+          <h2 class="section__title">List of Lost Items</h2>
+
+          <div class="popular__container swiper">
+            <div class="swiper-wrapper">
+              <article class="popular__card swiper-slide">
+                <img src="asset/img/popular1.jpg" alt="" class="popular__img" />
+
+                <div class="popular__data">
+                  <h2 class="popular__price"><span>TYPE: </span>ID CARD</h2>
+                  <h3 class="popular__title">
+                    <span>Owner: </span>Vishal Singh
+                  </h3>
+                  <p class="popular__description">
+                    <span>Description: </span>Street The Garden City Of
+                    Miraflores, Lima - Perú Av. Sol #9876
+                  </p>
+                </div>
+              </article>
+
+              <article class="popular__card swiper-slide">
+                <img src="asset/img/popular2.jpg" alt="" class="popular__img" />
+
+                <div class="popular__data">
+                  <h2 class="popular__price"><span>TYPE: </span>Bottle</h2>
+                  <h3 class="popular__title">
+                    <span>Owner: </span>Vishal Singh
+                  </h3>
+                  <p class="popular__description">
+                    <span>Description: </span>Street The Garden City Of
+                    Miraflores, Lima - Perú Av. Sol #9876
+                  </p>
+                </div>
+              </article>
+
+              <article class="popular__card swiper-slide">
+                <img src="asset/img/popular3.jpg" alt="" class="popular__img" />
+
+                <div class="popular__data">
+                  <h2 class="popular__price"><span>TYPE: </span>Phone</h2>
+                  <h3 class="popular__title">
+                    <span>Owner: </span>Vishal Singh
+                  </h3>
+                  <p class="popular__description">
+                    <span>Description: </span>Street The Garden City Of
+                    Miraflores, Lima - Perú Av. Sol #9876
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-button-next">
+              <i class="bx bx-chevron-right"></i>
+            </div>
+            <div class="swiper-button-prev">
+              <i class="bx bx-chevron-left"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== VALUE ====================-->
+      <section class="value section" id="value">
+        <div class="container">
+          <!-- <h2 class="section__title">List of Lost Items<span>.</span></h2> -->
+          <span class="section__subtitle">Found !</span>
+          <h2 class="section__title">List of Found Items</h2>
+
+          <div class="popular__container swiper">
+            <div class="swiper-wrapper">
+              <article class="popular__card swiper-slide">
+                <img src="asset/img/popular1.jpg" alt="" class="popular__img" />
+
+                <div class="popular__data">
+                  <h2 class="popular__price"><span>TYPE: </span>ID CARD</h2>
+                  <h3 class="popular__title">
+                    <span>Finder: </span>Vishal Singh
+                  </h3>
+                  <p class="popular__description">
+                    <span>Description: </span>Street The Garden City Of
+                    Miraflores, Lima - Perú Av. Sol #9876
+                  </p>
+                </div>
+              </article>
+
+              <article class="popular__card swiper-slide">
+                <img src="asset/img/popular2.jpg" alt="" class="popular__img" />
+
+                <div class="popular__data">
+                  <h2 class="popular__price"><span>TYPE: </span>Bottle</h2>
+                  <h3 class="popular__title">
+                    <span>Finder: </span>Vishal Singh
+                  </h3>
+                  <p class="popular__description">
+                    <span>Description: </span>Street The Garden City Of
+                    Miraflores, Lima - Perú Av. Sol #9876
+                  </p>
+                </div>
+              </article>
+
+              <article class="popular__card swiper-slide">
+                <img src="asset/img/popular3.jpg" alt="" class="popular__img" />
+
+                <div class="popular__data">
+                  <h2 class="popular__price"><span>TYPE: </span>Phone</h2>
+                  <h3 class="popular__title">
+                    <span>Finder: </span>Vishal Singh
+                  </h3>
+                  <p class="popular__description">
+                    <span>Description: </span>Street The Garden City Of
+                    Miraflores, Lima - Perú Av. Sol #9876
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-button-next">
+              <i class="bx bx-chevron-right"></i>
+            </div>
+            <div class="swiper-button-prev">
+              <i class="bx bx-chevron-left"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== CONTACT ====================-->
+      <section class="contact section" id="contact">
+        <div class="contact__container container grid">
+          <div class="contact__images">
+            <div class="contact__orbe"></div>
+
+            <div class="contact__img">
+              <img src="asset/img/contact.png" alt="" />
+            </div>
+          </div>
+
+          <div class="contact__content">
+            <div class="contact__data">
+              <span class="section__subtitle">Report </span>
+              <h2 class="section__title">
+                Lost or found Something <span>?</span>
+              </h2>
+              <p class="contact__description">
+                Did you lost or found something. Fill this form to report if so.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="contact__card-box">
+                <div class="contact__card-info">
+                  <!-- <i class="bx bxs-phone-call"></i> -->
+
+                  <div>
+                    <!-- <h3 class="contact__card-title">Call</h3> -->
+                    <button class="button contact__card-button">
+                      Sign in with Google
+                    </button>
+                    <form action="/action_page.php">
+                      <!-- <label for="cars">Lost or Found:</label> -->
+                      <h3 class="contact__card-title">Lost or Found : </h3>
+
+                      <div class="custom-select" style="width: 200px">
+                        <select id="Check" name="cars">
+                          <option value="0">Lost</option>
+                          <option value="1">Found</option>
+                        </select>
+                      </div>
+
+                      <div class="dropdown">
+                        <div class="select">
+                          <span>Lost or Found</span>
+                          <i class="fa fa-chevron-left"></i>
+                        </div>
+                        <input type="hidden" name="gender">
+                        <ul class="dropdown-menu">
+                          <li id="male">Lost</li>
+                          <li id="female">Found</li>
+                        </ul>
+                      </div>
+
+                      
+
+
+                      <h3 class="contact__card-title">Type</h3>
+                      <input
+                        type="text"
+                        placeholder="ID CARD/Bottle/etc"
+                        class="form-input"
+                      />
+                      <h3 class="contact__card-title">Description</h3>
+                      <textarea
+                        id="desc"
+                        name="desc"
+                        rows="4"
+                        cols="50"
+                        class="form-input"
+                      >
+                      </textarea>
+
+                      <h3 class="contact__card-title">Upload</h3>
+                      <input
+                      type="file"
+                      id="myFile"
+                      name="filename"
+                      accept="image/*"
+                      />
+                      <h3 class="contact__card-title">Upload</h3>
+
+                      <section class="droparea">
+                        <i class="far fa-images"></i>
+                        <p>Drop your .png or .jpg files here!</p>
+                        <p><small>Only 1 image in jpeg/png format only</small></p>
+                    </section>
+
+
+                    
+                      <input type="submit" class="button" />
+                    </form>
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== SUBSCRIBE ====================-->
+      <section class="subscribe section">
+        <div class="subscribe__container container">
+          <h1 class="subscribe__title">Get Started with FoundIt</h1>
+          <p class="subscribe__description">
+            Subscribe and find super attractive price quotes from us, Find your
+            residence soon
+          </p>
+          <a href="#" class="button subscribe__button"> Get Started </a>
+        </div>
+      </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+      <div class="footer__container container grid">
+        <div>
+          <a href="#" class="footer__logo">
+            FoundIt <i class="bx bxs-home-alt-2"></i>
+          </a>
+          <p class="footer__description">
+            bridging the gap between lost and found <br />
+            reuniting people with their belongings
+          </p>
+        </div>
+
+        <div class="footer__content">
+          <div>
+            <h3 class="footer__title">About</h3>
+
+            <ul class="footer__links">
+              <li>
+                <a href="#" class="footer__link">About Us</a>
+              </li>
+              <!-- <li>
+                <a href="#" class="footer__link">Features</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">News & Blog</a>
+              </li> -->
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer__title">Company</h3>
+
+            <ul class="footer__links">
+              <li>
+                <a href="#" class="footer__link">How We Work?</a>
+              </li>
+              <!-- <li>
+                <a href="#" class="footer__link">Capital</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Security</a>
+              </li> -->
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer__title">Support</h3>
+
+            <ul class="footer__links">
+              <li>
+                <a href="#" class="footer__link">FAQs</a>
+              </li>
+              <!-- <li>
+                <a href="#" class="footer__link">Support center</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Contact Us</a>
+              </li> -->
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer__title">Follow Crispr</h3>
+
+            <ul class="footer__social">
+              <!-- <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                class="footer__social-link"
+              >
+                <i class="bx bxl-facebook-circle"></i>
+              </a> -->
+
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                class="footer__social-link"
+              >
+                <i class="bx bxl-instagram-alt"></i>
+              </a>
+              <a
+                href="https://www.pinterest.com/"
+                target="_blank"
+                class="footer__social-link"
+              >
+                <i class="bx bxl-xing"></i>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__info container">
+        <span class="footer__copy"> &#169; Crispr </span>
+
+        <!-- <div class="footer__privacy">
+          <a href="#">Terms & Agreements</a>
+          <a href="#">Privacy Policy</a>
+        </div> -->
+      </div>
+    </footer>
+
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="bx bx-chevrons-up"></i>
+    </a>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="asset/js/scrollreveal.min.js"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="asset/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="asset/js/main.js"></script>
+    <!--=============== SELECT JS ===============-->
+    <script src="asset/js/select_tag.js"></script>
+    <script src="asset/js/drop.js"></script>
+  </body>
+</html>
