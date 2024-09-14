@@ -23,10 +23,29 @@
       
 <body>
     <h2>Login with Google</h2>
-    <a href="index.ejs">Home Page</a>
+    <a href="/index">Home Page</a>
     <% if (typeof message !== 'undefined') { %>
         <p style="color:red;"><%= message %></p>
     <% } %>
     <a href="/auth/google">Sign in with Google</a>
+    
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="bx bx-chevrons-up"></i>
+    </a>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="/js/scrollreveal.min.js"></script>
+    
+    <!--=============== SWIPER JS ===============-->
+    <script src="/js/swiper-bundle.min.js"></script>
+    
+    <!--=============== MAIN JS ===============-->
+    <script src="/js/main.js"></script>
+    <!--=============== SELECT JS ===============-->
+    <script src="/js/select_tag.js"></script>
+    <script src="/js/drop.js"></script>
+    
 </body>
 </html>
+

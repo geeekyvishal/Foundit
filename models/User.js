@@ -21,6 +21,10 @@ const UserSchema = new mongoose.Schema({
                 type: String, 
                 required: true
             },
+            object:{
+                type: String,
+                required: true
+            },
             description: {
                 type: String,
                 required: true
@@ -39,15 +43,16 @@ const UserSchema = new mongoose.Schema({
 
 const User = mongoose.model('User', UserSchema);
 
-cron.schedule('*/1 * * *', async () => { 
-    const oneWeekAgo = new Date(Date.now() -  7 * 24 * 60 * 60 * 1000); 
+// Schedule the cron job to run every hour
+cron.schedule('0 * * * *', async () => { 
+    const oneWeekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000); // 7 days ago
 
     try {
-        await User.updateMany(
+        const result = await User.updateMany(
             {}, 
             { $pull: { items: { date: { $lt: oneWeekAgo } } } } 
         );
-        console.log('Expired items (older than 1 week) removed');
+        console.log(`Expired items (older than 1 week) removed. Matched documents: ${result.matchedCount}, Modified: ${result.modifiedCount}`);
     } catch (err) {
         console.error('Error removing expired items:', err);
     }

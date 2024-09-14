@@ -22,7 +22,7 @@ router.get('/add-item', (req, res) => {
 });
 
 router.post('/add-item', upload.single('photo'), async (req, res) => {
-    const { type, description } = req.body;
+    const { type,object, description } = req.body;
     const photoUrl = `/uploads/${req.file.filename}`;
     
     if (!req.isAuthenticated()) {
@@ -32,7 +32,7 @@ router.post('/add-item', upload.single('photo'), async (req, res) => {
     try {
         await User.findByIdAndUpdate(req.user.id, {
             $push: {
-                items: { type, description, photo: photoUrl }
+                items: { type,object, description, photo: photoUrl }
             }
         });
         res.redirect('/index');
