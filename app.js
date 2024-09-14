@@ -39,6 +39,8 @@ app.set('view engine', 'ejs');
 app.use('/auth', authRoutes);
 app.use('/', itemRoutes);
 
+// app.js
+
 app.get('/index', async (req, res) => {
     try {
         const lostItems = [];
@@ -49,9 +51,9 @@ app.get('/index', async (req, res) => {
 
             users.forEach(user => {
                 user.items.forEach(item => {
-                    if (item.type === 'lost') {
+                    if (item.type === 'Lost') {
                         lostItems.push({ user, item });
-                    } else if (item.type === 'found') {
+                    } else if (item.type === 'Found') {
                         foundItems.push({ user, item });
                     }
                 });
@@ -66,6 +68,7 @@ app.get('/index', async (req, res) => {
         res.redirect('/');
     }
 });
+
 
 
 

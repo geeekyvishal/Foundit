@@ -3647,3 +3647,5 @@ node_modules/moment/src/locale/zh-hk.js
 node_modules/moment/src/locale/zh-mo.js
 node_modules/moment/src/locale/zh-tw.js
 node_modules/moment/ts3.1-typings/moment.d.ts
+itemtest.js
+additem.ejs
