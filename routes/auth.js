@@ -12,7 +12,7 @@ router.get('/google/callback',
 );
 
 router.get('/login-failed', (req, res) => {
-    res.render('index', { message: 'Only @iiitn.ac.in emails are allowed' });
+    res.render('login', { message: 'Only @iiitn.ac.in emails are allowed' });
 });
 
 router.get('/logout', (req, res, next) => {

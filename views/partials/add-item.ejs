@@ -1,32 +1,80 @@
 <section class="contact section" id="contact">
-    <div class="contact__container container grid">
-      <div class="contact__images">
-        <div class="contact__orbe"></div>
-        <div class="contact__img">
-          <!-- <img src="/assets/img/contact.png" alt="contact" /> -->
-        </div>
+  <div class="contact__container container grid">
+    <div class="contact__images">
+      <div class="contact__orbe"></div>
+      <div class="contact__img"></div>
+    </div>
+
+    <div class="contact__content">
+      <div class="contact__data">
+        <span class="section__subtitle">Report</span>
+        <h2 class="section__title">Lost or found Something <span>?</span></h2>
+        <p class="contact__description">
+          Did you lose or find something? Fill out this form to report it.
+        </p>
       </div>
-  
-      <div class="contact__content">
-        <div class="contact__data">
-          <span class="section__subtitle">Report</span>
-          <h2 class="section__title">Lost or found Something <span>?</span></h2>
-          <p class="contact__description">
-            Did you lose or find something? Fill out this form to report it.
-          </p>
-        </div>
-  
+
+      <% if (!user) { %>
+        <!-- Show sign-in option when not authenticated -->
         <div class="card">
           <div class="contact__card-box">
             <div class="contact__card-info">
-                <a href="/auth/google">
-                  <button class="button contact__card-button">Sign in with Google</button>
-                </a>
-                <p>Please sign in to report a lost or found item.</p>
+              <a href="/auth/google">
+                <button class="button contact__card-button">Sign in with Google</button>
+              </a>
+              <p>Please sign in to report a lost or found item.</p>
             </div>
           </div>
         </div>
-      </div>
+      <% } else { %>
+        <!-- Show form when the user is authenticated -->
+        <form action="/add-item" method="POST" enctype="multipart/form-data">
+          <h3 class="contact__card-title">Lost or Found:</h3>
+
+          <div class="custom-select" style="width: 200px">
+            <select id="Check" name="status">
+              <option value="Lost">Lost</option>
+              <option value="Found">Found</option>
+            </select>
+          </div>
+
+          <h3 class="contact__card-title">Type</h3>
+          <input
+            type="text"
+            name="type"
+            placeholder="ID CARD/Bottle/etc"
+            class="form-input"
+            required
+          />
+
+          <h3 class="contact__card-title">Description</h3>
+          <textarea
+            id="desc"
+            name="desc"
+            rows="4"
+            cols="50"
+            class="form-input"
+            required
+          ></textarea>
+
+          <h3 class="contact__card-title">Upload Image</h3>
+          <input
+            type="file"
+            id="myFile"
+            name="filename"
+            accept="image/*"
+            required
+          />
+
+          <section class="droparea">
+            <i class="far fa-images"></i>
+            <p>Drop your .png or .jpg files here!</p>
+            <p><small>Only 1 image in jpeg/png format allowed</small></p>
+          </section>
+
+          <input type="submit" class="button" value="Submit Report" />
+        </form>
+      <% } %>
     </div>
-  </section>
-  
+  </div>
+</section>

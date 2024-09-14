@@ -40,11 +40,12 @@ app.use('/auth', authRoutes);
 app.use('/', itemRoutes);
 
 app.get('/index', async (req, res) => {
-    if (req.isAuthenticated()) {
-        try {
+    try {
+        const lostItems = [];
+        const foundItems = [];
+
+        if (req.isAuthenticated()) {
             const users = await User.find();
-            const lostItems = [];
-            const foundItems = [];
 
             users.forEach(user => {
                 user.items.forEach(item => {
@@ -57,16 +58,21 @@ app.get('/index', async (req, res) => {
             });
 
             res.render('index', { user: req.user, lostItems, foundItems });
-        } catch (err) {
-            console.error(err);
-            res.redirect('/');
+        } else {
+            res.render('index', { user: null, lostItems: [], foundItems: [] });
         }
-    } else {
+    } catch (err) {
+        console.error(err);
         res.redirect('/');
     }
 });
 
-app.get('/', (req, res) => res.render('index'));
+
+
+app.get('/', (req, res) => {
+    res.render('index', { user: req.user || null, lostItems: [], foundItems: [] });
+});
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

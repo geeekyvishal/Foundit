@@ -29,9 +29,9 @@
   <!-- Main content -->
   <main>
     <!-- Include the home and lost-found partials -->
-    <%- include('partials/home') %>
-    <%- include('partials/lost-found') %>
-    <%- include('partials/add-item') %>
+    <%- include('partials/home', { user: user }) %>
+    <%- include('partials/lost-found', { user: user }) %>
+    <%- include('partials/add-item', { user: user }) %>    
   </main>
 
   <!-- Include the footer partial -->
