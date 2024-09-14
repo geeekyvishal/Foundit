@@ -46,31 +46,25 @@ app.get('/index', async (req, res) => {
         const lostItems = [];
         const foundItems = [];
 
-        if (req.isAuthenticated()) {
-            const users = await User.find();
+        // Fetch all users and their items (no need for authentication to view items)
+        const users = await User.find();
 
-            users.forEach(user => {
-                user.items.forEach(item => {
-                    if (item.type === 'Lost') {
-                        lostItems.push({ user, item });
-                    } else if (item.type === 'Found') {
-                        foundItems.push({ user, item });
-                    }
-                });
+        users.forEach(user => {
+            user.items.forEach(item => {
+                if (item.type === 'Lost') {
+                    lostItems.push({ user, item });
+                } else if (item.type === 'Found') {
+                    foundItems.push({ user, item });
+                }
             });
+        });
 
-            res.render('index', { user: req.user, lostItems, foundItems });
-        } else {
-            res.render('index', { user: null, lostItems: [], foundItems: [] });
-        }
+        res.render('index', { user: req.user || null, lostItems, foundItems });
     } catch (err) {
         console.error(err);
         res.redirect('/');
     }
 });
-
-
-
 
 app.get('/', (req, res) => {
     res.render('index', { user: req.user || null, lostItems: [], foundItems: [] });
