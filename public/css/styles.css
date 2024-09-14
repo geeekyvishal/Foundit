@@ -225,7 +225,7 @@ body.dark-theme {
 .nav {
   height: var(--header-height);
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
 }
 
@@ -280,6 +280,60 @@ body.dark-theme {
 
   .nav__link span {
     display: none;
+  }
+}
+
+/*login css file added */
+/* Aligning nav items and the container */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Ensure the logo is on the left */
+.nav__logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Style for aligning the right side buttons */
+.nav__right {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between the theme button and GitHub link */
+}
+
+.nav__link, .footer__social-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.login-nav {
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-right: 1rem; /* Optional spacing before the GitHub link */
+}
+
+.footer__social-link i {
+  font-size: 1.5rem;
+}
+
+/* Responsiveness (Optional) */
+@media screen and (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  .nav__right {
+    justify-content: flex-end;
+    margin-top: 1rem;
   }
 }
 
@@ -468,6 +522,8 @@ body.dark-theme {
 .popular__img {
   border-radius: 1rem;
   margin-bottom: 1rem;
+  height: 16rem;
+  width: 18rem;
 }
 
 .popular__data {
@@ -1384,3 +1440,85 @@ body.dark-theme {
 }
 
 /* drop box css ends here */
+
+
+/* google button css */
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  width: 240px;
+  height: 50px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.google-btn:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.google-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 100%;
+  background-color: #f7f7f7;
+  border-right: 1px solid #ebebeb;
+  border-radius: 50%;
+}
+
+.google-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.btn-text {
+  text-align: center;
+  flex: 1;
+  font-size: 16px;
+  color: #444;
+}
+
+.btn-text b {
+  font-weight: 500;
+}
+
+/* Responsive for tablets and small screens */
+@media (max-width: 768px) {
+  .google-btn {
+    width: 200px; /* Smaller width */
+    height: 45px; /* Adjust height */
+  }
+  
+  .btn-text {
+    font-size: 14px; /* Smaller text for better readability */
+  }
+  
+  .google-icon {
+    width: 22px; /* Smaller Google icon */
+    height: 22px;
+  }
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 480px) {
+  .google-btn {
+    width: 180px; /* Even smaller width */
+    height: 40px; /* Adjust height */
+  }
+  
+  .btn-text {
+    font-size: 12px; /* Further adjust text size for small screens */
+  }
+  
+  .google-icon {
+    width: 20px; /* Adjust Google icon size */
+    height: 20px;
+  }
+}

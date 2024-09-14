@@ -28,6 +28,8 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="public/css/styles.css" />
 
+    
+
     <title>Responsive real state website - Bedimcode</title>
   </head>
 
@@ -38,75 +40,46 @@
         <a href="#" class="nav__logo">
           FoundIt <i class="bx bxs-home-alt-2"></i>
         </a>
-
-        <div class="nav__menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#home" class="nav__link active-link">
-                <i class="bx bx-home-alt-2"></i>
-                <span>Home</span>
-              </a>
-            </li>
-
-            <li class="nav__item">
-              <a href="#popular" class="nav__link">
-                <i class="bx bx-building-house"></i>
-                <span>LOST</span>
-              </a>
-            </li>
-
-            <li class="nav__item">
-              <a href="#value" class="nav__link">
-                <i class="bx bx-award"></i>
-                <span>FOUND</span>
-              </a>
-            </li>
-
-            <li class="nav__item">
-              <!-- <a href="#contact" class="button nav__button "> -->
-              <a href="#contact" class="nav__link">
-                <!-- <i class='bx bxs-message-square-add'></i> -->
-                <i class="fa-solid fa-circle-plus"></i>
-                <span> ↈ Lost or Found ?</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Theme change button -->
-        <i class="bx bx-moon change-theme" id="theme-button"></i>
-
-        <!-- <a href="#contact" class="button nav__button"> Lost or Found Something </a> -->
-
-        <a
-          href="https://github.com/geeekyvishal/Foundit"
-          class="nav__link"
-          target="_blank"
-        >
-          <span>GitHub </span>
-
-          <a
-            href="https://github.com/geeekyvishal/Foundit"
-            target="_blank"
-            class="footer__social-link"
-          >
+    
+        <div class="nav__right">
+          <!-- Theme change button -->
+          <i class="bx bx-moon change-theme login-nav" id="theme-button"></i>
+    
+          <!-- GitHub Link -->
+          <a href="https://github.com/geeekyvishal/Foundit" target="_blank" class="nav__link">
+            GitHub
+          </a>
+          <a href="https://github.com/geeekyvishal/Foundit" target="_blank" class="footer__social-link">
             <i class="bx bxl-github"></i>
           </a>
-        </a>
+        </div>
       </nav>
     </header>
-
-    <!--==================== MAIN ====================-->
-    <main class="main">
-      <!--==================== HOME ====================-->
-      <section class="home section" id="home">
-        <div class="contact__card-button">
-            <h2>Login with Google</h2>
-        <a href="/index">Home Page</a>
-        <a href="/auth/google">Sign in with Google</a>
-        </div>
+    <section class="signin" style="margin-top: 10%; ">
+      
     </section>
-   
+    
+    </button>
+  
+    <div class="contact__card-box" style="margin-top: 20%; display: flex; align-items: center; justify-content: center;">
+      <div>
+        <div class="google-btn">
+          <div class="google-icon-wrapper">
+            <img class="google-icon" src="https://static-00.iconduck.com/assets.00/google-icon-2048x2048-pks9lbdv.png" alt="Google Icon">
+          </div>
+          <a href="/auth/google" style="text-decoration: none; color: black; ">Sign in with Google</a>
+        </div>
+      </div>
+      
+      <br>
+      <div style="padding: 5%;"> 
+        <button type="button" class="google-btn">
+          <a href="/index" class="btn-text"  style="text-decoration: none; color: rgb(0, 0, 0);">Home Page</a>
+        </button>
+      </div>
+
+    </div>
+
     <!--=============== SCROLLREVEAL ===============-->
     <script src="public/js/scrollreveal.min.js"></script>
     
