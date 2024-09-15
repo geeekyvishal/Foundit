@@ -23,6 +23,8 @@ Foundit is a web-based **Digital Lost and Found Platform** for IIITN, designed t
 | Om Amar               | [OmAmar106](https://github.com/OmAmar106) | bt23cse106@iiitn.ac.in          |
 
 ---
+![image](https://github.com/user-attachments/assets/211d776f-4b96-427c-bd9e-a460ad754dcf)
+
 
 ## **Tech Stack**
 
