@@ -34,7 +34,6 @@ Foundit is a web-based **Digital Lost and Found Platform** for IIITN, designed t
 
 ### **Backend**
 - **Node.js (Express.js)**: For building the server-side logic and handling API requests.
-- **RESTful API**: To manage communication between the frontend and backend.
   
 ### **Database**
 - **MongoDB**: To store user profiles, item records, and match results.
